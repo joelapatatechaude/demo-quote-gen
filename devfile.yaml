@@ -13,19 +13,6 @@ components:
     preferences:
       python.globalModuleInstallation: true
     type: chePlugin
-  - mountSources: true
-    endpoints:
-      - name: web
-        port: 8080
-        attributes:
-          protocol: http
-          public: 'true'
-          discoverable: 'false'
-    memoryLimit: 512Mi
-    type: dockerimage
-    alias: python
-    image: 'quay.io/eclipse/che-python-3.7:nightly'
-    name: test
   - endpoints:
       - name: postgres
         port: 5432
