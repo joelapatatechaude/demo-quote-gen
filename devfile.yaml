@@ -4,7 +4,7 @@ metadata:
 projects:
   - name: quotegen-backend
     source:
-      location: 'https://github.com/joelapatatechaude/demo-quote-gen.git'
+      location: 'https://github.com/snowjet/demo-quote-gen.git'
       type: git
       branch: master
 components:
@@ -13,6 +13,18 @@ components:
     preferences:
       python.globalModuleInstallation: true
     type: chePlugin
+  - mountSources: true
+    endpoints:
+      - name: web
+        port: 8080
+        attributes:
+          protocol: http
+          public: 'true'
+          discoverable: 'false'
+    memoryLimit: 512Mi
+    type: dockerimage
+    alias: python
+    image: 'quay.io/eclipse/che-python-3.7:nightly'
   - endpoints:
       - name: postgres
         port: 5432
