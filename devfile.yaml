@@ -6,7 +6,7 @@ projects:
     source:
       location: 'https://github.com/joelapatatechaude/demo-quote-gen.git'
       type: git
-      branch: sql
+      branch: master
 components:
   - id: ms-python/python/latest
     memoryLimit: 512Mi
